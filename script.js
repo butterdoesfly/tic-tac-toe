@@ -1,16 +1,15 @@
 winningText = document.getElementById("winningText");
 active = false;
 turn = ""
-function select(t) {
-	id = t[t.selectedIndex].value;
+function select(object) {
+	id = object.value;
 	if (id=="x") {
 		turn = "x";
 	} else if (id=="o") {
 		turn = "o";
 	}
 	active=true;
-	document.getElementById("turn_text").remove();
-	document.getElementById("turn_select").remove();
+	document.getElementById("select").remove();
 }
 function change(box) {
 	if (active==true) {
