@@ -42,16 +42,39 @@
 			select {
 				padding: 5px; 
 				border-width: 0;
+				color:white;
+				font-size: 25px;
+				text-align: left;
+				
 			}
+
+			div#select {
+				width:25%; 
+				height:20%;
+				overflow:hidden;
+				position:relative;
+				left: 50%;
+				transform: translate(-50%);
+			}
+
+			#select > p {
+				color:white;
+				font-size: 20px;
+				font-family: Monospace;
+			}
+
+			#select > button {
+				height: 95%; width:45%;
+			}
+
 		</style>
 	</head>
 	<body>
-		<p style="color:white;font-size: 25px;" id="turn_text">Start with x or o?</p>
-		<select onchange="select(this);" id="turn_select">
-			<option>?</option>
-			<option id="x">x</option>
-			<option id="o">o</option>
-		</select>
+		<div id="select">
+			<p id="turn_text">Start with X or O?</p>
+			<button style="float:left;" value="x" id="selectButton" onclick="select(this)">X</button>
+			<button style="float:right;" value="o" id="selectButton" onclick="select(this)">O</button>
+		</div>
 		
 		<div id="winningText"></div>
 		
