@@ -64,7 +64,19 @@
 			}
 
 			#select > button {
-				height: 95%; width:45%;
+				height: 95%; 
+				width:45%;
+				transition: transform 50ms ease-in-out;
+			}
+
+			#select > button:hover {
+				cursor: pointer;
+				transform: rotate(15deg);
+				transform: scale(1.1);
+			}
+
+			#select {
+				overflow: visible;
 			}
 
 		</style>
